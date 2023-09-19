@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class lab1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int num = scan.nextShort();
+        short num = scan.nextShort();
         double S = 0;
         System.out.print("Result: \n" + "C2: " + num % 2 + "\n" + "C3: " + num % 3 + "\n" + "C5: " + num % 5 + "\n" + "C7: " + num % 7 + "\n");
 
