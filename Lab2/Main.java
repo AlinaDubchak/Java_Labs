@@ -3,7 +3,12 @@ package Java_Labs.Lab2;
 public class Main {
     public static void main(String[] args) {
         try {
-            long[][] matrix = new long[][]{{1,4,6,7},{3,7,2,7}};
+          //  long[][] matrix = new long[][]{{1,4,6,7},{3,7,2,7}};
+
+            int numRows = 3;
+            int numCols = 3;
+            RandomMatrix randomMatrix = new RandomMatrix();
+            long[][] matrix = randomMatrix.generateRandomMatrix(numRows, numCols);
 
             System.out.println("Initial matrix");
 
