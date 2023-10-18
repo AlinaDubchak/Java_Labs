@@ -29,7 +29,7 @@ public class TransposedMatrix {
         return transposedMatrix;
     }
 
-    public static void average(long[][] matrix) {
+    public void findRowAverages(long[][] matrix) {
 
         for (int i = 0; i < matrix.length; i++) {
 
@@ -41,8 +41,8 @@ public class TransposedMatrix {
                 rowSum += matrix[i][j];
             }
 
-            double rowAverage = (double) rowSum / rowCount;
-            String result = String.format("%.3f", rowAverage);
+            double rowAverage = rowSum / rowCount;
+            String result = String.format("%.3f", rowAverage).replace(",", ".");;
             System.out.println("The average value of the elements in row " + i + ": " + result);
         }
     }
