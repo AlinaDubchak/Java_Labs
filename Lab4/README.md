@@ -1,8 +1,8 @@
 # Lab 4
 
-_Topic_
-Classes in the Java programming language.
-_Goal:_
+_Topic_<br>
+Classes in the Java programming language.<br>
+_Goal:_<br>
 Acquaintance with classes. Using existing and creating
 own classes in the Java language.
 
