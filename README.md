@@ -7,3 +7,5 @@
 ## Lab3 [Readme](https://github.com/AlinaDubchak/Java_Labs/blob/main/Lab3/README.md)
 
 ## Lab4 [Readme](https://github.com/AlinaDubchak/Java_Labs/blob/main/Lab4/README.md)
+
+## Lab5 [Readme](https://github.com/AlinaDubchak/Java_Labs/blob/main/Lab5/README.md)
