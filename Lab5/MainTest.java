@@ -2,7 +2,16 @@ package Java_Labs.Lab5;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
+/**
+ * JUnit test class for the Main class and its associated methods.
+ */
+
 public class MainTest {
+
+    /**
+     * Test the constructor of the Word class.
+     */
 
     @Test
     public void testWordConstructor() {
@@ -11,12 +20,20 @@ public class MainTest {
         assertEquals("Hello", word.toString());
     }
 
+    /**
+     * Test the constructor of the Sentence class.
+     */
+
     @Test
     public void testSentenceConstructor() {
         Sentence sentence = new Sentence("Hello world!");
         assertEquals(2, sentence.getElements().size());
         assertEquals("Hello world!", sentence.toString());
     }
+
+     /**
+     * Test the constructor of the Text class.
+     */
 
     @Test
     public void testTextConstructor() {
@@ -26,6 +43,10 @@ public class MainTest {
         assertEquals("Another test.", text.getSentences().get(1).toString());
     }
 
+    /**
+     * Test the transform method for a Word object.
+     */
+
     @Test
     public void testTransform() {
         Word word = new Word("banana");
@@ -33,6 +54,10 @@ public class MainTest {
         assertEquals(5, word.getLetters().size());
         assertEquals("anana", word.toString());
     }
+
+    /**
+     * Test the transform method for a Word object with case-insensitive comparison.
+     */
 
     @Test
     public void testTransformCaseInsensitive() {
@@ -42,6 +67,10 @@ public class MainTest {
         assertEquals("oOk", word.toString());
     }
 
+    /**
+     * Test the transform method for a Word object with mixed case.
+     */
+
     @Test
     public void testTransformMixedCase() {
         Word word = new Word("AbCD");
@@ -49,6 +78,10 @@ public class MainTest {
         assertEquals(3, word.getLetters().size());
         assertEquals("bCD", word.toString());
     }
+
+    /**
+     * Test the transform method for an empty Word object.
+     */
 
     @Test
     public void testTransformEmptyWord() {
@@ -58,13 +91,9 @@ public class MainTest {
         assertEquals("", word.toString());
     }
 
-//    @Test
-//    public void testTransformSentence() {
-//        Sentence sentence = new Sentence("Hello World!");
-//        Main.transform(sentence);
-//        assertEquals(3, sentence.getElements().size());
-//        assertEquals("Helo Wold!", sentence.toString());
-//    }
+    /**
+     * Test the transform method for a Text object.
+     */
 
     @Test
     public void testTransformText() {
