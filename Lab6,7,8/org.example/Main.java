@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.items.Armor;
-import org.example.items.Shield;
-import org.example.items.Sword;
-import org.example.items.Helmet;
+import org.example.items.*;
 
 import java.util.ArrayList;
 
@@ -15,7 +12,7 @@ import java.util.ArrayList;
  *
  * <p>Usage:
  * - Create instances of Sword, Shield, Armor, and Helmet.
- * - Add these equipment items to KnightEquipment.
+ * - Add these equipment items to Knight.
  * - Display the hierarchy of equipment.
  * - Calculate and display the total cost of equipment.
  * - Sort equipment items by weight and display the sorted list.
@@ -23,7 +20,7 @@ import java.util.ArrayList;
  *
  * <p>The code includes exception handling to catch and print any unexpected errors.
  *
- * @author Your Name
+ * @author Alina Dubchak
  * @version 1.0
  * @since 2023-12-07
  */
@@ -37,37 +34,37 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Create instances of equipment items
-            Sword sword = new Sword("Excalibur", 150.0, 5.0, 40);
-            Shield shield = new Shield("Iron Shield", 50.0, 10.0, 30);
-            Armor armor = new Armor("Steel Armor", 200.0, 15.0, "Steel");
-            Helmet helmet = new Helmet("Steel Helmet", 100.0, 8.0, 2);
+            Sword sword = new Sword("Excalibur", 150.0, 5.0);
+            Shield shield = new Shield("Iron Shield", 50.0, 10.0);
+            Armor armor = new Armor("Steel Armor", 200.0, 15.0);
+            Helmet helmet = new Helmet("Steel Helmet", 100.0, 8.0);
 
             // Create an instance of KnightEquipment
-            KnightEquipment knightEquipment = new KnightEquipment();
+            Knight knight = new Knight();
 
             // Add equipment items to KnightEquipment
-            knightEquipment.addEquipment(sword);
-            knightEquipment.addEquipment(shield);
-            knightEquipment.addEquipment(armor);
-            knightEquipment.addEquipment(helmet);
+            knight.addEquipment(sword);
+            knight.addEquipment(shield);
+            knight.addEquipment(armor);
+            knight.addEquipment(helmet);
 
             // Display the hierarchy of equipment
-            knightEquipment.displayHierarchy();
+            knight.displayHierarchy();
 
             // Calculate and display the total cost of equipment
-            System.out.println("\nTotal cost of equipment: " + knightEquipment.calculateTotalCost() + "\n");
+            System.out.println("\nTotal cost of equipment: " + knight.calculateTotalCost() + "\n");
 
             // Sort equipment items by weight and display the sorted list
-            knightEquipment.sortByWeight();
+            knight.sortByWeight();
             System.out.println("Equipment sorted by weight: \n");
-            for (Equipment equipment : knightEquipment.equipmentList) {
+            for (Equipment equipment : knight.equipmentList) {
                 System.out.println(equipment);
             }
 
             // Find and display equipment items in a specific price range
             double minPrice = 50.0;
             double maxPrice = 150.0;
-            ArrayList<Equipment> result = knightEquipment.findEquipmentInPriceRange(minPrice, maxPrice);
+            ArrayList<Equipment> result = knight.findEquipmentInPriceRange(minPrice, maxPrice);
             System.out.println("\nEquipment in the price range [" + minPrice + ", " + maxPrice + "]: \n");
             for (Equipment equipment : result) {
                 System.out.println(equipment);

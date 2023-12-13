@@ -1,52 +1,19 @@
 package org.example;
 
+import org.example.items.Equipment;
+
 import java.util.ArrayList;
 import java.util.Comparator;
-
-/**
- * The Equipment class represents a generic piece of equipment with a name, price, and weight.
- */
-public class Equipment {
-    String name;
-    double price;
-    double weight;
-
-    /**
-     * Constructs a new Equipment instance with the specified name, price, and weight.
-     *
-     * @param name   The name of the equipment.
-     * @param price  The price of the equipment.
-     * @param weight The weight of the equipment.
-     */
-    public Equipment(String name, double price, double weight) {
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
-    }
-
-    /**
-     * Returns a string representation of the Equipment object.
-     *
-     * @return A string containing the name, price, and weight of the equipment.
-     */
-    @Override
-    public String toString() {
-        return "Equipment{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", weight=" + weight +
-                '}';
-    }
-}
+import java.util.List;
 
 /**
  * The KnightEquipment class represents a collection of equipment items for a knight.
  * It provides methods to add equipment, display the hierarchy, calculate total cost,
  * sort by weight, and find equipment within a specified price range.
  */
-class KnightEquipment {
+class Knight {
+//    List<Equipment> equipmentList = new Equipment_List();
     ArrayList<Equipment> equipmentList = new ArrayList<>();
-
     /**
      * Adds an equipment item to the knight's equipment.
      *
